@@ -24,5 +24,31 @@ namespace calculator
         {
             InitializeComponent();
         }
+
+        private void NumberButtom_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button Click)
+            {
+                switch (Click.Content)
+                {
+                    case "0":
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "7":
+                    case "8":
+                    case "9":
+
+                        InOutField.Text += Click.Content;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
     }
 }
