@@ -79,5 +79,12 @@ namespace calculator
             InOutField.Text = "";
             operation = "-";
         }
+
+        private void Multy_Click(object sender, RoutedEventArgs e)
+        {
+            num1 = Convert.ToDouble(InOutField.Text);
+            InOutField.Text = "";
+            operation = "x";
+        }
     }
 }
