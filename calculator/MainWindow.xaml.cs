@@ -91,5 +91,9 @@ namespace calculator
             InOutField.Text = "";
             operation = "/";
         }
+        private void dot_Click(object sender, RoutedEventArgs e)
+        {
+            InOutField.Text = InOutField.Text + ",";
+        }
     }
 }
