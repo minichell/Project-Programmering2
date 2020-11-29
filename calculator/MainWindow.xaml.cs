@@ -20,6 +20,10 @@ namespace calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        double num1;
+        string operation;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -49,8 +53,6 @@ namespace calculator
                 }
             }
         }
-
-
         private void AllClearButtom_Click(object sender, RoutedEventArgs e)
         {
             InOutField.Text = string.Empty;
@@ -62,8 +64,13 @@ namespace calculator
             {
                 InOutField.Text = InOutField.Text.Substring(0, InOutField.Text.Length - 1);
             }
-
         }
 
+        private void Plus_Click(object sender, RoutedEventArgs e)
+        {
+            num1 = Convert.ToDouble(InOutField.Text);
+            InOutField.Text = "";
+            operation = "+";
+        }
     }
 }
