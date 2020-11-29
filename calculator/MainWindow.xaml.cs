@@ -108,6 +108,48 @@ namespace calculator
                 num1 = procent;
             }
         }
+        private void Equal_Click(object sender, RoutedEventArgs e)
+        {
 
+            double result;
+            double num2;
+
+            num2 = Convert.ToDouble(InOutField.Text);
+
+            if (operation == "+")
+            {
+                result = (num1 + num2);
+                InOutField.Text = Convert.ToString(result);
+                num1 = result;
+            }
+
+            else if (operation == "-")
+            {
+                result = (num1 - num2);
+                InOutField.Text = Convert.ToString(result);
+                num1 = result;
+            }
+
+            else if (operation == "x")
+            {
+                result = (num1 * num2);
+                InOutField.Text = Convert.ToString(result);
+                num1 = result;
+            }
+
+            else if (operation == "/")
+            {
+                if (num2 == 0)
+                {
+                    InOutField.Text = "Cannot divide";
+                }
+                else
+                {
+                    result = (num1 / num2);
+                    InOutField.Text = Convert.ToString(result);
+                    num1 = result;
+                }
+            }
+        }
     }
 }
