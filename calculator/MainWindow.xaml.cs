@@ -50,5 +50,20 @@ namespace calculator
             }
         }
 
+
+        private void AllClearButtom_Click(object sender, RoutedEventArgs e)
+        {
+            InOutField.Text = string.Empty;
+        }
+        private void ClearButtom_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (InOutField.Text.Length > 0)
+            {
+                InOutField.Text = InOutField.Text.Substring(0, InOutField.Text.Length - 1);
+            }
+
+        }
+
     }
 }
