@@ -95,5 +95,19 @@ namespace calculator
         {
             InOutField.Text = InOutField.Text + ",";
         }
+        private void procent_Click(object sender, RoutedEventArgs e)
+        {
+            num1 = Convert.ToDouble(InOutField.Text);
+            operation = "%";
+            double procent;
+
+            if (operation == "%")
+            {
+                procent = (num1 / 100);
+                InOutField.Text = Convert.ToString(procent);
+                num1 = procent;
+            }
+        }
+
     }
 }
